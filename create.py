@@ -16,17 +16,17 @@ else:
 #Making API call for creation of repository and making the initial commit.
 
 #url = "https://api.github.com/user/harshadokula/repos?access_token=<your token here>"
-API_endpoint = "https://api.github.com/user/harshadokula/repos?access_token=<your token here>"
+API_endpoint = "https://api.github.com/user/repos?access_token=<your token here>"
 req_head={ }
 req_body = {
   "name": "CreateRepo",
   "description": "Testing api" ,
   "homepage": "https://github.com",
-  "private": 'false',
+  "private": 'true',
 }
 #req_payload = {'reqHeader' : '', 'reqBody' : req_body}
 
-r = requests.post(url = API_endpoint ,data = req_body)
+r = requests.post(url = API_endpoint ,json = req_body)
 r.json()
 print("="*40)
 print(type(r.content))
