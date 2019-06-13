@@ -1,6 +1,6 @@
-#push_local_repo_To_Global
+# push_local_repo_To_Global
 
-##Contents
+## Contents
 1. create.py
 2. create.sh
 3. create.bat
