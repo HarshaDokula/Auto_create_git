@@ -18,24 +18,19 @@ endpoint = "https://api.github.com/user/repos?access_token="+token
 
 req_body = {
   "name": repo,
-  "description": "Repo creted using script",
+  "description": "Repo created using script. < Change >",
   "private":"false"
 }
 
 r = requests.post(url = endpoint ,json = req_body)
 r.json()
-# print("="*50)
-# print(type(r.content))
 
 # Decode UTF-8 bytes to Unicode, and convert single quotes to double quotes to make it valid JSON
 my_json = r.content.decode('utf8').replace("'", '"')
-#print(my_json)
-# print('- ' * 50)
 
 # Load the JSON to a Python list & dump it back out as formatted JSON
 data = json.loads(my_json)
-# s = json.dumps(data, indent=4, sort_keys=True)
-# print(s)
+
 
 # Display errors if found any
 if 'documentation_url' in data:
