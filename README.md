@@ -1,6 +1,6 @@
 # Automatic Repository Creation
 
-These script files help you to create an repository on github and do the initial commit of all the files present in the working directory.
+These script files help you to create a repository on github and do the initial commit of all the files present in the working directory.
 
 You will need [PAT (Personal Access token)](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) for these scripts.
 
